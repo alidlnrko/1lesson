@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Введение в квантовую физику</title>
+    <link rel="stylesheet" href="c:\Users\user\Desktop\ib project 2024-2025\web\quantym\first-lesson.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">World of Particles</a>
+            <ul class="nav-links">
+                <li><a href="c:\Users\user\Desktop\ib project 2024-2025\web\main_menu.html">В меню</a></li>
+                <li><a href="c:\Users\user\Desktop\ib project 2024-2025\web\first_lesson.html">Разделы уроков</a></li>f
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>квантовая физика 1 урок</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AG9gYu7-0xU?si=lCRJYt4NpPP83sEL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+
+        </iframe>
+        <form id="quiz-form">
+            <div class="quiz-form">
+                <label>1. как называется частица света</label><br>
+                <input type="radio" name="q1" value="синий"> Фотон<br>
+                <input type="radio" name="q1" value="красный"> электрон<br>
+            </div>
+            <div class="quiz-form">
+                <label>2. что такое квант энергии</label><br>
+                <input type="radio" name="q2" value="2"> Большая единица энергии<br>
+                <input type="radio" name="q2" value="3"> минимальная порция энергии<br>
+            </div>
+            <button type="button" id="check-btn">Проверить</button>
+        </form>
+        <div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+    </div>
+    <aside>
+       <h1> Квантовая физика — это раздел физики, который описывает поведение частиц на субатомном уровне. Она изучает:</h1>
+
+        <li>
+            <ul>
+                Кванты энергии.
+            </ul>
+            <ul>
+                Принцип неопределённости Гейзенберга.
+            </ul>
+            <ul>   
+                Двойственную природу света (волна-частица).
+            </ul>
+        </li>
+        <h1>Основные понятия:
+        </h1>
+        
+        <li>
+            <ol>
+                1. Квант — минимальная порция энергии, которую может излучать или поглощать система.
+
+            </ol>
+            <ol>
+                2. Фотон — частица света, которая переносит энергию.
+
+            </ol>
+            <ol>   
+                3. Суперпозиция — состояние, в котором частица может находиться в нескольких состояниях одновременно.
+            </ol>
+            <ol>
+                4. Запутанность — квантовое явление, при котором частицы остаются связаны, независимо от расстояния между ними.
+            </ol>
+        </li>
+        
+
+
+    </aside>
+
+    <script>
+        document.getElementById("check-btn").addEventListener("click", checkQuiz);
+
+        function checkQuiz() {
+            let score = 0;
+            const answers = { q1: "синий", q2: "3" };
+            const formData = new FormData(document.getElementById("quiz-form"));
+
+            for (let [question, answer] of formData.entries()) {
+                if (answers[question] === answer) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").innerText = "Вы набрали " + score + " из 2 баллов.";
+        }
+    </script>
+    
+</body>
+</html>
+
+
